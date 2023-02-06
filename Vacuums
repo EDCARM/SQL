@@ -1,0 +1,30 @@
+#In this project I pulled data from Best Buy's website for vacuums. 
+
+CREATE TABLE Best_vacuum (id INTEGER PRIMARY KEY, brand TEXT, model TEXT, price INTEGER, cleaning_width INTEGER, bin_capacity INTEGER, cord_length INTEGER);
+INSERT INTO Best_vacuum VALUES(1, "Bissell", "CleanView", 180, 13, .2, 30);
+INSERT INTO Best_vacuum VALUES(2, "Bissell", "Little Green", 113, 3, 1,15);
+INSERT INTO Best_vacuum VALUES(3, "Bissell", "ProHeat", 242, 11, 1, 25);
+INSERT INTO Best_vacuum VALUES(4, "Dyson", "V12", 549, 9.9, .1, 0);
+INSERT INTO Best_vacuum VALUES(5, "Dyson", "Cyclone V10", 450, 9.8, .2, 0);
+INSERT INTO Best_vacuum VALUES(6, "Dyson", "V15", 749, 10.1, .2, 0);
+INSERT INTO Best_vacuum VALUES(7, "Dyson", "Outsize", 949, 11.2, .5, 0);
+INSERT INTO Best_vacuum VALUES(8, "Shark", "Navigator", 229, 11.9, .89, 25);
+INSERT INTO Best_vacuum VALUES(9, "Shark", "Pet Stick", 199, 10.6, .1, 0);
+INSERT INTO Best_vacuum VALUES(10, "Shark", "Rotator", 299, 12, .89, 30);
+INSERT INTO Best_vacuum VALUES(11, "Shark", "ION ROBOT", 199, 5.9, .11, 0);
+INSERT INTO Best_vacuum VALUES(12, "Insignia", "Bagless", 120, 11.5, .4, 0);
+INSERT INTO Best_vacuum VALUES(13, "Samsung", "Beaspoke", 599, 9.8, .2, 0);
+INSERT INTO Best_vacuum VALUES(14, "Samsung", "Jet Bot", 799, 6.3, .08, 0);
+INSERT INTO Best_vacuum VALUES(15, "Samsung", "Jet 75", 399, 9.8, .2, 0);
+
+SELECT *
+FROM best_vacuum
+ORDER BY price;
+
+SELECT *
+FROM best_vacuum
+WHERE price BETWEEN 200 AND 700
+GROUP BY bin_capacity
+HAVING bin_capacity > .1
+ORDER BY price DESC
+LIMIT 2;
