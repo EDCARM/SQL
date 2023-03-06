@@ -23,7 +23,7 @@ INSERT INTO wealth (millionaire_id, net_worth, source_wealth) VALUES (4, "45 mil
 INSERT INTO wealth (millionaire_id, net_worth, source_wealth) VALUES (5, "300 million", "Singer");
 
 
-/*Return total net worth for each billionare*/
+/*Return total net worth for each millionare*/
 SELECT millionaires.fullname, wealth.net_worth
 FROM millionaires
 JOIN wealth
